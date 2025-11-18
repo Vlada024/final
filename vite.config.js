@@ -5,5 +5,8 @@ import react from '@vitejs/plugin-react'
 // the base should be set to '/final/'. Update if your repo name differs.
 export default defineConfig({
   base: '/final/',
-  plugins: [react()]
+  plugins: [react()],
+  build: {
+    outDir: 'docs'
+  }
 })
