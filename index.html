@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shape Counter Trainer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Debug hook: prints startup and surfaces runtime errors on the page.
+      console.log('Shape Counter — debug hook initialized');
+      window.addEventListener('error', (e) => {
+        try {
+          const msg = e.error && e.error.stack ? e.error.stack : (e.message || String(e));
+          console.error('Runtime error (caught):', e.error || e.message || e);
+          document.body.innerHTML = '<pre style="color:#ff6b6b;background:#111;padding:16px;white-space:pre-wrap;">' + msg + '</pre>';
+        } catch (err) {
+          console.error('Failed to render error to DOM', err);
+        }
+      });
+      window.addEventListener('unhandledrejection', (e) => {
+        try {
+          const msg = e.reason && e.reason.stack ? e.reason.stack : JSON.stringify(e.reason);
+          console.error('Unhandled rejection:', e.reason);
+          document.body.innerHTML = '<pre style="color:#ff6b6b;background:#111;padding:16px;white-space:pre-wrap;">' + msg + '</pre>';
+        } catch (err) {
+          console.error('Failed to render rejection to DOM', err);
+        }
+      });
+    </script>
     <script type="module" crossorigin src="./assets/index-C2vSCUx4.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DHbylSBu.css">
   </head>
