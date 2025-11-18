@@ -1,0 +1,22 @@
+{
+  "name": "final",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://Vlada024.github.io/final",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^2.5.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "gh-pages": "^5.0.0"
+  }
+}
